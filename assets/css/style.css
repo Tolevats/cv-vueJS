@@ -1,21 +1,78 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-  .cv-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .section-title {
-    font-weight: bold;
-  }
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #fbd84f;
+  margin: 0;
+}
+.cv-container {
+  width: auto;
+  margin: 0 auto;
+  padding: 20px;
+  color: #333;
+  line-height: 1.6;
+}
+/* Mobile-first styles */
+h1, h2, h3, h5 {
+  font-family: 'Ultra', serif;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 15px;
+}
 .img-thumbnail {
-    max-width: 400px;
-    margin: 0 auto;
+  width: 50%;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+.contact-info {
+  text-align: center;
+}
+.contact-info i {
+  color: #ed4b3e;
+  margin-right: 10px;
+}
+.section-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-size: 1.2em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+strong {
+  color: #ed4b3e;
+  background-color: #f8f9fa;
+}
+p {
+  margin: 5px 0;
+}
+.text-line {
+  font-size: 0.75rem;
+  font-weight: bolder;
+}
+footer p {
+  color: #ed4b3e;
+  font-size: medium;
+  text-align: center;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .cv-container {
+    padding: 0px;
+    margin: 150px;
+    max-width: 1000px;
   }
+  .img-thumbnail {
+    float: right;
+    margin-left: 20px;
+    width: 250px;
+    margin-bottom: 0;
+  }
+  .contact-info {
+    text-align: left;
+  }
+}
