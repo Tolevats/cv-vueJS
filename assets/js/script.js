@@ -4,9 +4,10 @@ new Vue({
     data: {
       name: 'Juan Carlos',
       surname: 'Bodoque y Vodoque',
+      position: 'Periodista estrella',
       address: 'Villa Fantasía 777, Santiago - Chile',
       phone: '+56 1234567890',
-      email: 'juancarlos@31minutos.com',
+      email: 'bodoque@31minutos.com',
       summary: 'Periodista consumado con una pasión por lo excéntrico y una habilidad innata para narrar historias. Con una amplia experiencia en reportajes de campo y una cartera de contactos que abarca desde chamanes hasta caballos de carreras, Juan Carlos Bodoque es la voz autorizada en temas ambientales y culturales de 31 Minutos.',
       experience: [
         { 
@@ -64,16 +65,21 @@ new Vue({
       goal: '“Algún día conduciré 31 Minutos en lugar de Tulio… si es que él se retira, claro. Y si no, siempre me queda el plan B: convertirme en crítico de zanahorias.”',
     },
     template: `
-      <div class="cv-container my-5">
-        <img src="assets/imgs/jc-bodoque.webp" alt="Foto de Juan Carlos Bodoque" class="img-thumbnail rounded mx-auto d-block">
-        <h1>{{ name }} {{ surname }}</h1>
-        <h5>Resumen</h5>
+      <div class="cv-container">
+        <img src="assets/imgs/jc-bodoque.webp" alt="Foto de Juan Carlos Bodoque" class="img-thumbnail mx-auto d-block">
+          <h1>{{ name }} {{ surname }}</h1>
+          <h2><em>{{ position }}<em><i class="fas fa-solid fa-star"></i></h2>
+
+        <div class="contact-info">  
+          <p class="text-line"><i class="fas fa-map-marker-alt"></i> <em>{{ address }}</em></p>
+          <p class="text-line"><i class="fas fa-phone"></i><em>{{ phone }}</em></p>
+          <p class="text-line"><i class="fas fa-envelope"></i><em>{{ email }}</em></p>
+        </div>
+
+        <h5 class="section-title">Resumen</h5>
         <p>{{ summary }}</p>
-        <p><strong>Dirección:</strong> {{ address }}</p>
-        <p><strong>Teléfono:</strong> {{ phone }}</p>
-        <p><strong>Correo:</strong> {{ email }}</p>
-  
-        <h2>Experiencia Profesional</h2>
+          
+        <h3 class="section-title">Experiencia Profesional</h3>
         <ul>
           <li v-for="experience in experience" :key="experience.company">
              <strong>{{ experience.role }} en {{ experience.company }}</strong> ({{ experience.year }})
@@ -81,7 +87,7 @@ new Vue({
           </li>
         </ul>
   
-        <h2>Educación</h2>
+        <h3 class="section-title">Educación</h3>
         <ul>
           <li v-for="education in education" :key="education.degree">
              <strong>{{ education.degree }} en {{ education.institution }}</strong> ({{ education.year }})
@@ -89,22 +95,50 @@ new Vue({
           </li>
         </ul>
 
-        <h2>Habilidades</h2>
+        <h3 class="section-title">Habilidades</h3>
         <ul>
           <li v-for="skill in skills" :key="skill.skill">
             <strong>{{ skill.skill }}:</strong> {{ skill.description }}
           </li>
         </ul>
 
-        <h2>Idiomas</h2>
+        <h3 class="section-title">Idiomas</h3>
         <ul>
           <li v-for="language in languages" :key="language.name">
             <strong>{{ language.name }}:</strong> {{ language.description }}
           </li>
         </ul>
 
-        <h2>Meta Profesional</h2>
-        <p>{{ goal }}</p>
+        <h3 class="section-title">Meta Profesional</h3>
+        <p><em>{{ goal }}</em></p>
+
+        <br>
+        <footer>
+          <p>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+            <i class="fas fa-solid fa-horse"></i>
+          </p>
+          <p>© 2024 Tolevats</p>
+        </footer>
+        
       </div>
     `
   })
